@@ -17,11 +17,11 @@ const printedAge = document.getElementById('età')
 printedAge.innerHTML = userAge
 //## Calcolo il prezzo base del biglietto (0,21 euro per km)
     //- dichiaro variabile costo di base che assume valore (variabile km * costo/km)
-const basePrice = nKm * 0.21
+let basePrice = nKm * 0.21
 console.log(basePrice)
 //## Calcolo lo sconto da applicare in base dell'utente e lo applico al prezzo di base
     //- dichiaro variabile per il costo finale
-let finalPrice
+//let finalPrice
     //- SE l'età è inferiore a 18 applico sconto del 20%
         //- costo finale = costo base - (costo base * 20 / 100)
     //- ALTRIMENTI SE è superiore a 65 applico sconto del 40%
@@ -29,17 +29,17 @@ let finalPrice
     //- ALTRIMENTI non si applica nessuno sconto
         //- costo finale = costo base
 if (userAge < 18) {
-    finalPrice = basePrice - ((basePrice * 20) / 100)
+    basePrice = basePrice - ((basePrice * 20) / 100)
     console.log(finalPrice)
 } else if (userAge > 65) {
-    finalPrice = basePrice - ((basePrice * 40) / 100)
+    basePrice = basePrice - ((basePrice * 40) / 100)
     console.log(finalPrice)
 } else {
-    finalPrice = basePrice
+    basePrice = basePrice
     console.log(finalPrice)
 }
 //## Stampo a schermo il prezzo finale del biglietto
     //- richiamo elemento DOM con id = prezzo scontato
     //- modifico l' innerHTML dell'elemento con il valore della variabile " costo finale "
 const printedFinalPrice = document.getElementById('prezzo-finale')
-printedFinalPrice.innerHTML = finalPrice.toFixed(2)
+printedFinalPrice.innerHTML = basePrice.toFixed(2)
