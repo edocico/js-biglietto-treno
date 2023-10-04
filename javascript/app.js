@@ -6,11 +6,15 @@
     //- converto valore restituito in valore numerico
 const nKm = parseFloat(prompt('Quanti km devi percorrere ?'))
 console.log(nKm)
+const printedKm = document.getElementById('chilometri')
+printedKm.innerHTML = nKm
 //## Chiedo all'utente qual'è la sua età
     //- dichiaro variabile età utente assegnandogli valore restituito da prompt
     //- converto valore restituito in valore numerico
 const userAge = parseInt(prompt('Quanti anni hai ?'))
 console.log(userAge)
+const printedAge = document.getElementById('età')
+printedAge.innerHTML = userAge
 //## Calcolo il prezzo base del biglietto (0,21 euro per km)
     //- dichiaro variabile costo di base che assume valore (variabile km * costo/km)
 const basePrice = nKm * 0.21
@@ -37,3 +41,5 @@ if (userAge < 18) {
 //## Stampo a schermo il prezzo finale del biglietto
     //- richiamo elemento DOM con id = prezzo scontato
     //- modifico l' innerHTML dell'elemento con il valore della variabile " costo finale "
+const printedFinalPrice = document.getElementById('prezzo-finale')
+printedFinalPrice.innerHTML = finalPrice

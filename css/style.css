@@ -3,3 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.app {
+    height: 100vh;
+}
+
+.app-header {
+    padding: 40px 40px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 30px;
+}
