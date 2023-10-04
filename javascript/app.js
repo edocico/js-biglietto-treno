@@ -42,4 +42,4 @@ if (userAge < 18) {
     //- richiamo elemento DOM con id = prezzo scontato
     //- modifico l' innerHTML dell'elemento con il valore della variabile " costo finale "
 const printedFinalPrice = document.getElementById('prezzo-finale')
-printedFinalPrice.innerHTML = finalPrice
+printedFinalPrice.innerHTML = finalPrice.toFixed(2)
