@@ -30,13 +30,13 @@ console.log(basePrice)
         //- costo finale = costo base
 if (userAge < 18) {
     basePrice = basePrice - ((basePrice * 20) / 100)
-    console.log(finalPrice)
+    console.log(basePrice)
 } else if (userAge > 65) {
     basePrice = basePrice - ((basePrice * 40) / 100)
-    console.log(finalPrice)
+    console.log(basePrice)
 } else {
     basePrice = basePrice
-    console.log(finalPrice)
+    console.log(basePrice)
 }
 //## Stampo a schermo il prezzo finale del biglietto
     //- richiamo elemento DOM con id = prezzo scontato
